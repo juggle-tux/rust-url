@@ -213,6 +213,15 @@ impl<'a> ParseOptions<'a> {
     }
 }
 
+impl<'a> fmt::Debug for ParseOptions<'a> {
+    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+        f.debug_struct("ParseOptions")
+            .field("base_url", &self.base_url)
+            .field("encoding_override", &self.encoding_override)
+            .finish()
+    }
+}
+
 impl Url {
     /// Parse an absolute URL from a string.
     ///
