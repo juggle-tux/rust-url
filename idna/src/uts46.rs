@@ -258,7 +258,7 @@ fn processing(domain: &str, flags: Flags, errors: &mut Vec<Error>) -> String {
     validated
 }
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Debug)]
 pub struct Flags {
    pub use_std3_ascii_rules: bool,
    pub transitional_processing: bool,

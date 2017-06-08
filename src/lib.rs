@@ -1871,6 +1871,7 @@ fn io_error<T>(reason: &str) -> io::Result<T> {
 }
 
 /// Implementation detail of `Url::query_pairs_mut`. Typically not used directly.
+#[derive(Debug)]
 pub struct UrlQuery<'a> {
     url: &'a mut Url,
     fragment: Option<String>,

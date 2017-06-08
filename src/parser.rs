@@ -102,7 +102,7 @@ pub fn default_port(scheme: &str) -> Option<u16> {
     }
 }
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct Input<'i> {
     chars: str::Chars<'i>,
 }
@@ -221,7 +221,7 @@ pub struct Parser<'a> {
     pub context: Context,
 }
 
-#[derive(PartialEq, Eq, Copy, Clone)]
+#[derive(PartialEq, Eq, Copy, Clone, Debug)]
 pub enum Context {
     UrlParser,
     Setter,

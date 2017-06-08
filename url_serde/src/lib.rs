@@ -213,7 +213,7 @@ impl<'de> Deserialize<'de> for De<Host> {
 
 /// A convenience wrapper to be used as a type parameter, for example when
 /// a `Vec<T>` or an `HashMap<K, V>` need to be passed to serde.
-#[derive(Clone, Eq, Hash, PartialEq)]
+#[derive(Clone, Debug, Eq, Hash, PartialEq)]
 pub struct Serde<T>(pub T);
 
 /// A convenience type alias for Serde<Url>.
